@@ -19,11 +19,11 @@
 			Confirm Password: <input type="password" id="confirmPassword"/>
 			</p>
 			<p align="center">
-			<form:radiobuttons path="accountType" items="${mySpecialAccountTypes}" element="div"/><br/>
+			<form:radiobuttons path="accountTypes" items="${mySpecialAccountTypes}" element="div"/><br/>
 			<form:checkboxes path="selectedCountries" items="${countries}" element="div"/><br/>
 			<form:checkbox path="termsOfService" label="Terms of service"/> 
 			 <p align="center">
-			 <input type="button" id="registerbutton" value="Register"/>
+			 
 			<input type="button" id="submitbutton" value="Login"/>
 			</p>
 			<p align="center" style="color: red">${result}</p>

@@ -27,9 +27,9 @@
 				
 				
 			});
-			$("#registerbutton").click(function(){
+			/* $("#registerbutton").click(function(){
 				window.location.href = "register.jsp";
-			});
+			}); */
 			
 		});
 		
@@ -54,7 +54,7 @@
 			<form:checkboxes path="selectedCountries" items="${countries}" element="div"/><br/>
 			<form:checkbox path="termsOfService" label="Terms of service"/> --%>
 			 <p align="center">
-			 <input type="button" id="registerbutton" value="Register"/>
+			 <input type="button" onclick="location.href='register'" id="registerbutton" value="Register"/>
 			<input type="button" id="submitbutton" value="Login"/>
 			</p>
 			<p align="center" style="color: red">${result}</p>
