@@ -34,24 +34,7 @@ public class LoginController {
 		return "user/login";
 	}
 
-	/*private void createAccountTypes(Model model) {
-		List<String> accountTypes = new ArrayList<String>();
-		List<String> countries = new ArrayList<String>();
-		
-		accountTypes.add("free");
-		accountTypes.add("bronze");
-		accountTypes.add("silver");
-		accountTypes.add("gold");
-		
-		countries.add("USA");
-		countries.add("Canada");
-		countries.add("Japan");
-		countries.add("Germany");
-		countries.add("England");
-		model.addAttribute("mySpecialAccountTypes", accountTypes);
-		model.addAttribute("countries", countries);
-	}
-	*/
+	
 	/**
 	 * @param locale
 	 * @param model

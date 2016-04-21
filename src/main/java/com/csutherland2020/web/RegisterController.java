@@ -10,13 +10,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.csutherland2020.springroo.Users;
+
 @Controller
 @RequestMapping("user")
 public class RegisterController {
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
+	public String register(Locale locale, Model model) {
 		createAccountTypes(model);
+		model.addAttribute("user", new Users());
 		return "user/register";
 	}
 	
