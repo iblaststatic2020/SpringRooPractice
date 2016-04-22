@@ -7,10 +7,12 @@ import java.util.Locale;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.csutherland2020.springroo.Users;
+import com.csutherland2020.springroo.User;
+import com.csutherland2020.web.command.UserCommand;
 
 @Controller
 @RequestMapping("user")
@@ -19,7 +21,8 @@ public class RegisterController {
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String register(Locale locale, Model model) {
 		createAccountTypes(model);
-		model.addAttribute("user", new Users());
+		
+		model.addAttribute("user", new UserCommand());
 		return "user/register";
 	}
 	
@@ -41,4 +44,15 @@ public class RegisterController {
 	model.addAttribute("countries", countries);
 	}
 	
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public String registerPost(@ModelAttribute("user") UserCommand userCommand, Locale locale, Model model) {
+	
+		model.addAttribute("user", userCommand);
+		
+		
+		return"user/register";
+	}
 }
+
+	
+	

@@ -5,11 +5,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class LoginDao {
 
-	public Users getUser(Users incompleteUser){
+	public User getUser(User incompleteUser){
 		
 		//Here query db for this user object.
 		
-		Users userFromDatabase = new Users();
+		User userFromDatabase = new User();
 		userFromDatabase.setUsername("admin");
 		
 		return userFromDatabase;

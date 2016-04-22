@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.csutherland2020.springroo.LoginDao;
-import com.csutherland2020.springroo.Users;
+import com.csutherland2020.springroo.User;
 
 
 	@Service
@@ -13,7 +13,7 @@ import com.csutherland2020.springroo.Users;
 		LoginDao loginDao;
 		
 
-		public Users isUsernameAndPasswordValid(Users user){
+		public User isUsernameAndPasswordValid(User user){
 			
 			/*if(user.getUsername().equals("admin"));{
 				if(user.getPassword().equals("pass12"));{
@@ -26,7 +26,7 @@ import com.csutherland2020.springroo.Users;
 				return null;
 			}
 			
-			Users userFromDatabase = loginDao.getUser(user);
+			User userFromDatabase = loginDao.getUser(user);
 			return userFromDatabase;
 			
 		}

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.csutherland2020.springroo.Users;
+import com.csutherland2020.springroo.User;
 import com.csutherland2020.web.service.LoginService;
 
 
@@ -30,7 +30,7 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
 		//createAccountTypes(model);
-		model.addAttribute("user", new Users());
+		model.addAttribute("user", new User());
 		return "user/login";
 	}
 
@@ -41,10 +41,10 @@ public class LoginController {
 	 * @return
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginPost(@ModelAttribute("user") Users user, Locale locale, Model model) {
+	public String loginPost(@ModelAttribute("user") User user, Locale locale, Model model) {
 	
 		
-		Users userFromDatabase = loginService.isUsernameAndPasswordValid(user);
+		User userFromDatabase = loginService.isUsernameAndPasswordValid(user);
 		
 		if(userFromDatabase != null){
 			model.addAttribute("user", userFromDatabase); 

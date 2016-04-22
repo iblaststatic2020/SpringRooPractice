@@ -19,7 +19,7 @@
 			Confirm Password: <input type="password" id="confirmPassword"/>
 			</p>
 			<p align="center">
-			<form:radiobuttons path="accountTypes" items="${mySpecialAccountTypes}" element="div"/><br/>
+			<form:radiobuttons path="accountType" items="${mySpecialAccountTypes}" element="div"/><br/>
 			<form:checkboxes path="selectedCountries" items="${countries}" element="div"/><br/>
 			<form:checkbox path="termsOfService" label="Terms of service"/> 
 			 <p align="center">
