@@ -3,10 +3,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 @Entity
+@Table(name="Users")
 public class User {
 
     private Long id;
@@ -17,22 +20,13 @@ public class User {
     
     private String accountType;
 
-    private String country;
-
+   
     public String getAccountType() {
 		return accountType;
 	}
 
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
 	}
 
 	public Boolean getTermsOfService() {

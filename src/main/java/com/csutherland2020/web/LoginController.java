@@ -47,7 +47,7 @@ public class LoginController {
 		User userFromDatabase = loginService.isUsernameAndPasswordValid(user);
 		
 		if(userFromDatabase != null){
-			model.addAttribute("user", userFromDatabase); 
+			model.addAttribute("user", user); 
 			return "app/home";
 		}
 		else{

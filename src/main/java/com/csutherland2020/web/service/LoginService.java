@@ -26,9 +26,28 @@ import com.csutherland2020.springroo.User;
 				return null;
 			}
 			
-			User userFromDatabase = loginDao.getUser(user);
-			return userFromDatabase;
 			
+			/*User userFromDatabase = loginDao.getUser(user);*/
+			return user;
+			
+		}
+		
+		public User usernameValidation(User user){
+			
+			if(user.getUsername().length() >= 2){
+				return user;
+			}
+			else{
+				return null;
+			}
+			
+			
+		}
+
+
+		public void createUser(User user) {
+			// TODO Auto-generated method stub
+			loginDao.createUser(user);
 		}
 
 }
