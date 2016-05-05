@@ -34,7 +34,8 @@ import com.csutherland2020.springroo.User;
 		
 		public User usernameValidation(User user){
 			
-			if(user.getUsername().length() >= 2){
+			if(user.getUsername().length() >= 2 && user.getPassword().length() >= 6){
+				
 				return user;
 			}
 			else{

@@ -10,14 +10,25 @@
 	<script type="text/javascript">
 		$(function(){
 			
-			if(("#username").length > 2){
+			if($("#username").length <= 2){
+				if($("#password").length > 6){
+					if($("#password") === $("confirmPassword")){
+						$("#loginButton").click(function(){
+							$("#user").submit();
+						});
+					}
+					else{
+						alert("Passwords don't match.");
+					}
+				}
+				else{
+					alert("Password must be at least 6 characters long");
+				}
 				
-				$("#loginButton").click(function(){
-					$("#user").submit();
-				});
+				
 			}
 			else{
-				alert("Username is too short")
+				alert("Username is too short");
 			}
 				
 				
